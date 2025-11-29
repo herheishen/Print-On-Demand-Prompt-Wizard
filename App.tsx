@@ -20,27 +20,27 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 p-4 sm:p-6 lg:p-8 flex flex-col items-center">
-      <header className="w-full max-w-6xl text-center mb-8">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-indigo-800 drop-shadow-md">
-          Print-On-Demand Prompt Wizard
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
+      <header className="w-full max-w-4xl text-center mb-12">
+        <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900 tracking-tight">
+          POD Prompt Wizard
         </h1>
-        <p className="mt-3 text-lg text-gray-600">
-          Genera prompts creativos y optimizados para tus productos POD.
+        <p className="mt-4 text-xl text-gray-600">
+          Genera prompts creativos y optimizados para tus productos Print-On-Demand.
         </p>
       </header>
 
-      <main className="w-full max-w-7xl flex flex-col md:flex-row gap-6">
+      <main className="w-full max-w-7xl flex flex-col md:flex-row gap-8 lg:gap-12">
         <div className="md:flex-1">
           <PromptGeneratorForm onSubmit={handleGenerate} isLoading={isLoading} />
         </div>
-        <div className="md:flex-1 sticky top-4 self-start">
+        <div className="md:flex-1">
           <PromptOutputDisplay output={output} />
         </div>
       </main>
 
-      <footer className="mt-12 text-center text-gray-500 text-sm">
-        Desarrollado con ❤️ para la comunidad POD.
+      <footer className="mt-20 text-center text-gray-500 text-base">
+        Desarrollado con ❤️ para la comunidad Herheishen.
       </footer>
     </div>
   );
