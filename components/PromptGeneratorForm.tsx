@@ -44,12 +44,12 @@ const PromptGeneratorForm: React.FC<PromptGeneratorFormProps> = ({ onSubmit, isL
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-8 bg-white/20 backdrop-blur-xl shadow-lg ring-1 ring-white/50 rounded-2xl space-y-6"
+      className="p-8 bg-white/20 backdrop-blur-xl shadow-lg ring-1 ring-white/50 rounded-xl space-y-6"
     >
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">Generador de Prompts</h2>
+      <h2 className="font-heading-sf text-3xl font-semibold text-gray-900 mb-6">Generador de Prompts</h2>
       {fields.map(field => (
         <div key={field.name}>
-          <label htmlFor={field.name} className="block text-base font-semibold text-gray-700 mb-2">
+          <label htmlFor={field.name} className="block text-base font-body-inter font-semibold text-gray-700 mb-2">
             {field.label}
           </label>
           {field.type === 'textarea' ? (
@@ -59,7 +59,7 @@ const PromptGeneratorForm: React.FC<PromptGeneratorFormProps> = ({ onSubmit, isL
               value={formData[field.name as keyof UserInput]}
               onChange={handleChange}
               rows={3}
-              className="mt-1 block w-full px-4 py-3 border border-white/50 rounded-lg shadow-sm bg-white/50 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-300 sm:text-base resize-y transition duration-200 ease-in-out"
+              className="mt-1 block w-full px-4 py-3 border border-white/50 rounded-lg shadow-sm bg-white/50 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-300 sm:text-base resize-y transition duration-200 ease-in-out font-body-inter font-normal"
               required
             ></textarea>
           ) : (
@@ -69,7 +69,7 @@ const PromptGeneratorForm: React.FC<PromptGeneratorFormProps> = ({ onSubmit, isL
               name={field.name}
               value={formData[field.name as keyof UserInput]}
               onChange={handleChange}
-              className="mt-1 block w-full px-4 py-3 border border-white/50 rounded-lg shadow-sm bg-white/50 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-300 sm:text-base transition duration-200 ease-in-out"
+              className="mt-1 block w-full px-4 py-3 border border-white/50 rounded-lg shadow-sm bg-white/50 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-300 sm:text-base transition duration-200 ease-in-out font-body-inter font-normal"
               required
             />
           )}
@@ -78,7 +78,7 @@ const PromptGeneratorForm: React.FC<PromptGeneratorFormProps> = ({ onSubmit, isL
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-md text-base font-semibold text-white bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200 ease-in-out"
+        className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-md text-base font-cta-poppins font-medium text-white bg-gradient-to-r from-blue-800 to-indigo-900 hover:from-blue-900 hover:to-indigo-950 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200 ease-in-out"
       >
         {isLoading ? 'Generando...' : 'Generar Prompts'}
       </button>
