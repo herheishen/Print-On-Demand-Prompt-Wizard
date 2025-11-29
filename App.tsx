@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import PromptGeneratorForm from './components/PromptGeneratorForm';
 import PromptOutputDisplay from './components/PromptOutputDisplay';
@@ -20,12 +19,12 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
-      <header className="w-full max-w-4xl text-center mb-12">
-        <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900 tracking-tight">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <header className="w-full max-w-5xl text-center mb-16">
+        <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
           POD Prompt Wizard
         </h1>
-        <p className="mt-4 text-xl text-gray-600">
+        <p className="mt-4 text-xl text-gray-600 font-light">
           Genera prompts creativos y optimizados para tus productos Print-On-Demand.
         </p>
       </header>
@@ -39,7 +38,7 @@ function App() {
         </div>
       </main>
 
-      <footer className="mt-20 text-center text-gray-500 text-base">
+      <footer className="mt-24 text-center text-gray-500 text-sm font-light">
         Desarrollado con ❤️ para la comunidad Herheishen.
       </footer>
     </div>

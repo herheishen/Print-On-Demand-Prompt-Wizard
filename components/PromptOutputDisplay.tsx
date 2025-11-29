@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { PodPromptsOutput, BundleProduct } from '../types';
 
@@ -7,7 +6,7 @@ interface PromptOutputDisplayProps {
 }
 
 const OutputSection: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-  <div className="py-5 border-b border-gray-200 last:border-b-0">
+  <div className="py-6 border-b border-gray-200/50 last:border-b-0">
     <h3 className="text-xl font-bold text-gray-800 mb-3">{title}</h3>
     <div className="text-gray-700 text-base leading-relaxed whitespace-pre-wrap">{children}</div>
   </div>
@@ -16,14 +15,16 @@ const OutputSection: React.FC<{ title: string; children: React.ReactNode }> = ({
 const PromptOutputDisplay: React.FC<PromptOutputDisplayProps> = ({ output }) => {
   if (!output) {
     return (
-      <div className="p-8 bg-white shadow-xl rounded-2xl flex justify-center items-center h-full min-h-[400px]">
-        <p className="text-gray-500 text-xl font-medium">Esperando tus inputs para generar prompts...</p>
+      <div className="p-8 bg-white/20 backdrop-blur-xl shadow-lg ring-1 ring-white/50 rounded-2xl flex justify-center items-center h-full min-h-[400px]">
+        <p className="text-gray-500 text-xl font-medium text-center">
+          Tu creatividad brillará aquí. ¡Genera tus primeros prompts!
+        </p>
       </div>
     );
   }
 
   return (
-    <div className="p-8 bg-white shadow-xl rounded-2xl">
+    <div className="p-8 bg-white/20 backdrop-blur-xl shadow-lg ring-1 ring-white/50 rounded-2xl">
       <h2 className="text-3xl font-bold text-gray-900 mb-6">Resultados Generados</h2>
 
       <OutputSection title="1) PROMPT PARA IMAGEN PRINCIPAL (PRINT READY)">
